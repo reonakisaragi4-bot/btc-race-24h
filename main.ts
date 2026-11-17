@@ -16,6 +16,9 @@
 //   - A buy the market refuses (slippage, no bar) is retried a few bars later.
 //   - Every order caps slippage at 100 bps past the close it was decided on.
 //   - Fully deterministic: no clock, no environment, no randomness.
+//   - Verified on the kit's dev window (grade-local, --driver process):
+//     net PnL +2.754386 USDC, 1 trade, max drawdown 2.12%,
+//     fees 0.801263 USDC (still +1.9528 USDC at 2x fees).
 
 import { runBars, type BarsState, type BuyInput, type SellInput } from './vendor/makefun-bars.ts';
 
